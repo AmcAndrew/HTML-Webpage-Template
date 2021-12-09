@@ -1,0 +1,88 @@
+<html>
+    <style>
+        body {
+            background-color: #ff7c003b;
+        }
+        h1 {
+            color: rgb(235, 100, 0);
+            text-align: center;
+        }
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        .active, .collapsible:hover {
+            background-color: rgb(235, 100, 0);
+
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: rgba(235, 102, 0, 0.350);
+        }
+        footer {
+            font-size: 10px;
+        }
+    </style>
+
+    <head>
+        <title>Your Title Here</title>
+    </head>
+
+    <body>
+        <h1>Your Title here</h1>        
+        
+        <hr>
+
+        <p>Your first paragraph here.</p>
+
+        <button type="button" class="collapsible">First Dropdown Title Here</button>
+        <div class="content"> 
+                <p>
+                    First dropdown text here.
+                </p>
+        </div>
+
+        <p>Your second paragraph here.</p>
+
+        <button type="button" class="collapsible">Second Dropdown Title Here</button>
+        <div class="content"> 
+                <p>
+                    Second dropdown text here.
+                </p>
+        </div>
+    </body>
+
+    <footer>
+        <p>
+            Note : All colors are customizable at the top of this file.
+            <br>
+            Credits : Andrew Cromar for source code.
+        </p>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
+</html>
